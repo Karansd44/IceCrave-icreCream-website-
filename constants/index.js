@@ -149,7 +149,7 @@ const allCocktails = [
 	image: "/images/drink2.png",
 	title: "A Zesty Classic That Never Fails",
 	description:
-	 "This image features a swirl of creamy white soft-serve ice cream (likely vanilla) set inside a crisp, golden-brown waffle cone. The ice cream is generously drizzled with glossy chocolate syrup that pools around the rim of the cone. It is also garnished with small, golden-orange crumbles, which appear to be caramel bits or crushed nuts.",
+	 "This image features a swirl of creamy white soft-serve ice cream (likely vanilla) set inside a crisp, golden-brown waffle cone.",
  },
  {
 	id: 3,
@@ -157,7 +157,7 @@ const allCocktails = [
 	image: "/images/drink3.png",
 	title: "Simple Ingredients, Bold Flavor",
 	description:
-	 "This image features a tall, structured stack of light green ice cream, likely matcha (green tea) or pistachio flavor. The texture is unique, combining the porous look of hand-scooped ice cream with smooth, soft-serve-style ribbons swirling around the exterior. It rests in a classic golden-brown waffle cone against a dark background, presented simply without any syrups or sprinkles to highlight the ice cream's texture.",
+	 "This image features a tall, structured stack of light green ice cream, likely matcha (green tea) or pistachio flavor. The texture is unique, combining the porous look of hand-scooped ice cream with smooth, soft-serve-style ribbons swirling around the exterior.",
  },
  {
 	id: 4,
@@ -165,7 +165,7 @@ const allCocktails = [
 	image: "/images/drink4.png",
 	title: "Crafted With Care, Poured With Love",
 	description:
-	 "This image showcases a classic, generous scoop of dark brown ice cream, likely dark chocolate or chocolate fudge. Unlike the soft-serve images, this scoop features distinct, rough ridges on top, characteristic of hard-scooped ice cream. The bottom of the scoop is slightly melted and glossy, creating a thick, creamy drip over the edge of the light golden waffle cone.",
+	 "This image showcases a classic, generous scoop of dark brown ice cream, likely dark chocolate or chocolate fudge. Unlike the soft-serve images, this scoop features distinct, rough ridges on top, characteristic of hard-scooped ice cream.",
  },
 ];
 
