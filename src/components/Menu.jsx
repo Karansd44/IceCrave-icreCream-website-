@@ -50,8 +50,8 @@ const Menu = () => {
 
   return (
     <section id="menu" aria-labelledby ="menu-heading">
-        <img src="/images/slider-left-leaf.png" alt="left-leaf" id="m-left-leaf" />
         <img src="/images/slider-right-leaf.png" alt="right-leaf" id="m-right-leaf" />
+        <img src="/images/slider-left-leaf.png" alt="left-leaf" id="m-left-leaf" />
 
 
         <h2 id="menu-heading" className='sr-only'>
@@ -74,31 +74,56 @@ const Menu = () => {
 
         <div className="content">
             <div className="arrows">
-                <button className="text-left" onClick={() => gotoSlide(currentIndex -1)}>
-                    <span>{previousIceCream.name}</span>
-                    <img src="/images/right-arrow.png" alt="right-arrow" aria-hidden="true"/>
+                <button 
+                    className="text-left group transition-all duration-300" 
+                    onClick={() => gotoSlide(currentIndex - 1)}
+                    aria-label={`Previous flavor: ${previousIceCream.name}`}
+                >
+                    <span className="group-hover:opacity-80 transition-opacity">
+                        {previousIceCream.name}
+                    </span>
+                    <img 
+                        src="/images/right-arrow.png" 
+                        alt="" 
+                        aria-hidden="true"
+                        className="group-hover:translate-x-1 transition-transform"
+                    />
                 </button>
 
-                <button className="text-left" onClick={() => gotoSlide(currentIndex + 1)}>
-                    <span>{nextIceCream.name}</span>
-                    <img src="/images/left-arrow.png" alt="left-arrow" aria-hidden="true"/>
+                <button 
+                    className="text-right group transition-all duration-300" 
+                    onClick={() => gotoSlide(currentIndex + 1)}
+                    aria-label={`Next flavor: ${nextIceCream.name}`}
+                >
+                    <span className="group-hover:opacity-80 transition-opacity">
+                        {nextIceCream.name}
+                    </span>
+                    <img 
+                        src="/images/left-arrow.png" 
+                        alt="" 
+                        aria-hidden="true"
+                        className="group-hover:-translate-x-1 transition-transform"
+                    />
                 </button>
             </div>
 
-
             <div className="cocktail">
-                <img src={currentIceCream.image} alt={currentIceCream.name} className='object-contain'/>
+                <img 
+                    src={currentIceCream.image} 
+                    alt={currentIceCream.name} 
+                    className='object-contain transition-opacity duration-500'
+                />
             </div>
 
             <div className="recipe">
                 <div ref={contentRef} className='info'>
-                    <p>Flavor:</p>
-                    <p id="title">{currentIceCream.name}</p>
+                    <p className="text-white/60 text-sm sm:text-base uppercase tracking-wider mb-2">Flavor</p>
+                    <p id="title" className="leading-tight">{currentIceCream.name}</p>
                 </div>
 
                 <div className="details">
-                    <h2>{currentIceCream.title}</h2>
-                    <p>{currentIceCream.description}</p>
+                    <h2 className="leading-tight mb-3 sm:mb-4">{currentIceCream.title}</h2>
+                    <p className="text-white/80 leading-relaxed">{currentIceCream.description}</p>
                 </div>
             </div>
         </div>

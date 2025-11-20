@@ -275,68 +275,86 @@ body{
     }
 
     #menu {
-        @apply relative w-full md:mt-40 mt-10 2xl:px-0 px-5 py-10 sm:py-20 radial-gradient;
+        @apply relative w-full md:mt-40 mt-10 2xl:px-0 px-5 py-10 sm:py-20 radial-gradient overflow-hidden;
 
         #m-left-leaf {
-            @apply object-contain absolute -bottom-20 left-0 md:w-fit w-1/3;
+            @apply object-contain absolute -bottom-20 left-0 md:w-fit w-1/3 opacity-70;
         }
 
         #m-right-leaf {
-            @apply object-contain absolute -top-40 right-0 md:w-fit w-1/4;
+            @apply object-contain absolute -top-40 right-0 md:w-fit w-1/4 opacity-70;
         }
 
         .cocktail-tabs {
             @apply grid md:grid-cols-4 grid-cols-2 md:gap-20 gap-6 sm:gap-10 sm:mb-32 mb-16 relative z-10 md:max-w-6xl md:mx-auto;
 
             button {
-                @apply text-base sm:text-xl md:text-3xl pb-2 cursor-pointer hover:text-yellow hover:border-yellow border-b transition-colors font-modern-negra;
+                @apply text-base sm:text-xl md:text-3xl pb-2 cursor-pointer border-b font-modern-negra relative overflow-hidden;
+                
+                &::after {
+                    content: '';
+                    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-yellow transition-all duration-300;
+                }
+                
+                &:hover::after,
+                &.active::after {
+                    @apply w-full;
+                }
             }
         }
 
         .content {
-            @apply flex flex-col justify-between items-center container mx-auto relative;
+            @apply flex flex-col justify-between items-center container mx-auto relative min-h-[70vh];
 
             .arrows {
-                @apply flex items-center justify-between w-full absolute;
+                @apply flex items-center justify-between w-full absolute top-1/2 -translate-y-1/2 z-10 px-0 md:px-4;
 
                 button {
-                    @apply text-white hover:text-yellow cursor-pointer transition-colors max-w-36;
+                    @apply text-white cursor-pointer transition-all duration-300 max-w-32 sm:max-w-36 md:max-w-48 flex items-center gap-2 md:gap-3;
 
                     span {
-                        @apply text-3xl font-modern-negra leading-none hidden md:block;
+                        @apply text-xl sm:text-2xl md:text-3xl font-modern-negra leading-none hidden md:block;
+                    }
+                    
+                    img {
+                        @apply w-6 sm:w-8 md:w-10 h-auto;
                     }
                 }
             }
         }
 
         .cocktail {
-            @apply flex-center mt-6 sm:mt-10;
+            @apply flex-center mt-6 sm:mt-10 relative z-0;
 
             img {
-                @apply object-contain h-[40vh] sm:h-[50vh] md:h-[60vh];
+                @apply object-contain h-[40vh] sm:h-[50vh] md:h-[60vh] drop-shadow-2xl;
             }
         }
 
         .recipe {
-            @apply flex max-md:flex-col gap-6 sm:gap-10 md:items-center justify-between w-full lg:absolute bottom-0;
+            @apply flex max-md:flex-col gap-6 sm:gap-10 md:items-end justify-between w-full lg:absolute bottom-0 z-10 mt-8 md:mt-0;
 
             .info {
-                @apply space-y-2 sm:space-y-4 lg:translate-y-20;
+                @apply space-y-2 sm:space-y-3 lg:translate-y-20 flex-shrink-0;
+
+                p:first-child {
+                    @apply font-medium;
+                }
 
                 #title {
-                    @apply font-modern-negra text-2xl sm:text-3xl md:text-6xl text-yellow max-w-40;
+                    @apply font-modern-negra text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-yellow max-w-60;
                 }
             }
 
             .details {
-                @apply space-y-3 sm:space-y-5 md:max-w-md text-left;
+                @apply space-y-3 sm:space-y-4 md:space-y-5 md:max-w-md lg:max-w-lg text-left flex-grow;
 
                 h2 {
-                    @apply text-2xl sm:text-3xl md:text-5xl font-serif;
+                    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white;
                 }
 
                 p {
-                    @apply md:text-lg pe-5;
+                    @apply text-sm sm:text-base md:text-lg leading-relaxed;
                 }
             }
         }
