@@ -18,19 +18,6 @@ const Cocktails = () => {
         parallaxTimeline
             .from('#c-left-leaf', { x: -100, y: 100 })
             .from('#c-right-leaf', { x: 100, y: -100 });
-
-        // Animate list items
-        gsap.from('.popular li, .loved li', {
-            scrollTrigger: {
-                trigger: '.list',
-                start: 'top center',
-            },
-            opacity: 0,
-            y: 30,
-            duration: 0.8,
-            stagger: 0.1,
-            ease: 'power2.out'
-        });
     });
     
     return (
