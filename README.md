@@ -1,8 +1,8 @@
-# 🍹 Cocktail - Premium Cocktail Bar Website
+# 🍦 IceCrave - Premium Ice Cream Shop Website
 
-A stunning, interactive cocktail bar website built with React, Vite, and powered by GSAP animations. Experience smooth scroll animations, parallax effects, and immersive video reveals as you explore our premium cocktail menu.
+A stunning, interactive ice cream shop website built with React, Vite, and powered by GSAP animations. Experience smooth scroll animations, parallax effects, and immersive video reveals as you explore our premium ice cream flavors.
 
-![Cocktail Website](/readme/work-9.png)
+![IceCrave Website](/readme/work-9.png)
 
 ## ✨ Features
 
@@ -48,7 +48,7 @@ gsap.timeline({
 - **Pin Animation**: Section pins while content animates
 
 ### Menu Section
-- **Smooth Transitions**: Cocktail images transition smoothly between slides
+- **Smooth Transitions**: Ice cream flavor images transition smoothly between slides
 - **Tab Navigation**: Active state animations with color transitions
 
 ### Contact Section
@@ -65,8 +65,8 @@ gsap.timeline({
 
 1. Clone the repository
 ```bash
-git clone https://github.com/karansd44/CockTail.git
-cd CockTail
+git clone https://github.com/Karansd44/IceCrave-icreCream-website-.git
+cd IceCrave-icreCream-website-
 ```
 
 2. Install dependencies
@@ -94,15 +94,15 @@ npm run dev
 ## 🎨 Project Structure
 
 ```
-CockTail/
+IceCrave/
 ├── src/
 │   ├── components/
 │   │   ├── Hero.jsx         # Hero section with video animation
 │   │   ├── Navbar.jsx       # Navigation with scroll effects
-│   │   ├── Cocktails.jsx    # Cocktail showcase section
+│   │   ├── Cocktails.jsx    # Ice cream showcase section
 │   │   ├── About.jsx        # About section
 │   │   ├── Art.jsx          # Art section with mask animations
-│   │   ├── Menu.jsx         # Interactive menu slider
+│   │   ├── Menu.jsx         # Interactive flavor slider
 │   │   └── Contact.jsx      # Contact form and info
 │   ├── App.jsx              # Main app component
 │   ├── main.jsx             # Entry point
