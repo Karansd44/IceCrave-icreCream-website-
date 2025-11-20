@@ -26,7 +26,7 @@ const About = () => {
  
  return (
 	<div id="about">
-	 <div className="mb-16 md:px-0 px-5">
+	 <div className="mb-10 sm:mb-16 md:px-0 px-5">
 		<div className="content">
 		 <div className="md:col-span-8">
 			<p className="badge">Best Ice Cream</p>
@@ -37,15 +37,15 @@ const About = () => {
 		 </div>
 		 
 		 <div className="sub-content">
-			<p>
+			<p className="text-sm sm:text-base md:text-lg">
 			 Every scoop we serve is a reflection of our obsession with detail — from the first churn to the final topping. That care is what turns a simple dessert into something truly memorable.
 			</p>
 			
 			<div>
-			 <p className="md:text-3xl text-xl font-bold">
+			 <p className="text-lg sm:text-xl md:text-3xl font-bold">
 				<span>4.5</span>/5
 			 </p>
-			 <p className="text-sm text-white-100">
+			 <p className="text-xs sm:text-sm text-white-100">
 				More than +12000 customers
 			 </p>
 			</div>

@@ -40,14 +40,15 @@ const Contact = () => {
         <div className="content">
             <h2>Where To Find Us</h2>
             <div>
-                <h3>Vist Our Bar</h3>
+                <h3>Visit Our Shop</h3>
                 <p>456, Raq Blvd. #404, Los Angeles, CA 90210</p>
             </div>
 			<div>
 				<h3>Contact Us</h3>
 				<p>(555) 987-6543</p>
 				<p>hello@icecreamshop.com</p>
-			</div>            <div>
+			</div>
+			<div>
                 <h3>Open Every Day</h3>
                 {openingHours.map((time)=>(
                     <p key={time.day}>
@@ -58,10 +59,12 @@ const Contact = () => {
 
             <div>
                 <h3>Socials</h3>
-                <div className='flex-center gap-5'>
+                <div className='flex-center gap-3 sm:gap-5'>
                     {
                         socials.map((social) => (
-                            <a key={social.name} href={social.url} target="_blank" rel="noopener noreferrer" aria-label={social.name}><img src={social.icon} alt={social.name} /></a>
+                            <a key={social.name} href={social.url} target="_blank" rel="noopener noreferrer" aria-label={social.name}>
+                                <img src={social.icon} alt={social.name} className="w-6 sm:w-8 h-auto" />
+                            </a>
                         ))
                     }
                 </div>

@@ -28,11 +28,12 @@ const Cocktails = () => {
 
 		<div className="list">
 			<div className="popular">
-				<h2>Most popular flavors:</h2>                <ul>
+				<h2>Most popular flavors:</h2>
+				<ul>
                     {cocktailLists.map(({name, country, detail, price})=>
                     (
                         <li key = {name}>
-                            <div className="md:me-28">
+                            <div className="me-10 sm:me-16 md:me-28">
                                 <h3>{name}</h3>
                                 <p>{country} | {detail}</p>
                             </div>
@@ -43,11 +44,12 @@ const Cocktails = () => {
             </div>
 
 			<div className="loved">
-				<h2>Most loved sundaes:</h2>                <ul>
+				<h2>Most loved sundaes:</h2>
+				<ul>
                     {mockTailLists.map(({name, country, detail, price})=>
                     (
                         <li key = {name}>
-                            <div className="me-28">
+                            <div className="me-10 sm:me-16 md:me-28">
                                 <h3>{name}</h3>
                                 <p>{country} | {detail}</p>
                             </div>
